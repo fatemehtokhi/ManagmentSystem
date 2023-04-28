@@ -3,5 +3,22 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "localhost",
+            "database": "students",
+            "username": "root",
+            "password": "rootroot"
+        }
+    ],
+    "terminal.integrated.fontSize": 25,
+    "terminal.integrated.fontWeight": "normal"
 }
