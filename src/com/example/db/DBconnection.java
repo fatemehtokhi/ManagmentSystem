@@ -8,7 +8,7 @@ public class DBconnection {
             Class.forName("com.mysql.jdbc.Driver");
             String user = "root";
             String pass = "rootroot";
-            String url = "jdbc:mysql://localhost/3306/DB?autoReconnect=true&useSSL=false";
+            String url = "jdbc:mysql://localhost/3306/students?autoReconnect=true&useSSL=false";
 
             con = DriverManager.getConnection(url,user,pass);
 
