@@ -25,9 +25,11 @@ public class App {
                     break;
                 case 5:
                     System.out.println("Thank you for registeration");
-                    System.exit();
+                    System.exit(ch);
+
                 default:
-                    break;
+
+                    
             }
         }
     }
