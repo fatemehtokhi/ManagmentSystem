@@ -5,8 +5,12 @@ public class StudentDao implements StudentDaoInterface{
 
     @Override
     public boolean insertStudent(Student s) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'insertStudent'");
+        try {
+            
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return false;
     }
 
     @Override

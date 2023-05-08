@@ -2,6 +2,9 @@ package com.example.main;
 
 import java.util.Scanner;
 
+import com.example.dao.StudentDao;
+import com.example.model.Student;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
@@ -12,7 +15,19 @@ public class App {
             int ch = sc.nextInt();
             switch (ch) {
                 case 1:
-                    System.out.println("Add Student");
+                    System.out.println("Enter Student name");
+                    String name =sc.next();
+                    System.out.println("Enter Student clg name");
+                    String clgName = sc.next();
+                    System.out.println("Enter city");
+                    String city = sc.next();
+                    System.out.println("Enter Percentage ");
+                    Double percentage = sc.nextDouble();
+                    Student st  = new Student (name,clgName,city,percentage);
+                    
+                     
+                    
+
                     break;
                 case 2:
                     System.out.println("show all Students");
