@@ -3,10 +3,14 @@ package com.example.main;
 import java.util.Scanner;
 
 import com.example.dao.StudentDao;
+import com.example.dao.StudentDaoInterface;
 import com.example.model.Student;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        StudentDaoInterface dao = new StudentDao() {
+            
+        };
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to Student Managment application");
         while (true){
@@ -24,7 +28,14 @@ public class App {
                     System.out.println("Enter Percentage ");
                     Double percentage = sc.nextDouble();
                     Student st  = new Student (name,clgName,city,percentage);
-                    
+                    boolean ans = dao.insertStudent(st);
+                    if (ans) {
+                        System.out.println("Record inserted successfully");
+                    } else {
+                        System.out.println("Something went wrong, please try again");
+                        
+                        
+                    }
                      
                     
 
