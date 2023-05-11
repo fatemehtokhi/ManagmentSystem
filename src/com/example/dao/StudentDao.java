@@ -1,5 +1,6 @@
 package com.example.dao;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 import com.example.db.DBconnection;
 import com.example.model.Student;
@@ -8,13 +9,24 @@ public class StudentDao implements StudentDaoInterface{
 
     @Override
     public boolean insertStudent(Student s) {
+        boolean flag =false;
         try {
+            
             Connection con = DBconnection.creatConnection();
             String query = "insert into student_detals(sname,clgname,city,percentage) value (?,?,?,?)";
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, s.getName());
+            pst.setString(2, s.getClgName());
+            pst.setString(3, s.getCity());
+            pst.setDouble(4, s.getPercentage());
+            pst.executeUpdate();
+
+
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
-        return false;
+    
+        return flag;
     }
 
     @Override
