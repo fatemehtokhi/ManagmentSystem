@@ -50,10 +50,13 @@ public class App {
                     System.out.println("Delete Student");
                     break;
                 case 5:
-                    System.out.println("Thank you for registeration");
-                    System.exit(ch);
-
-                default:
+                    System.out.println("update Student");
+                    break;
+                case 6:
+                    System.out.println("thank you for using this application");
+                    System.exit(0);
+                    default:
+                    System.out.println("please enter vali number");
 
                     
             }

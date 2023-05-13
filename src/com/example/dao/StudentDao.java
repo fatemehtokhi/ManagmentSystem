@@ -2,6 +2,8 @@ package com.example.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import javax.swing.Spring;
+
 import com.example.db.DBconnection;
 import com.example.model.Student;
 
@@ -43,8 +45,13 @@ public class StudentDao implements StudentDaoInterface{
 
     @Override
     public void showAllStudent() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'showAllStudent'");
+        try {
+            Connection con = DBconnection.creatConnection();
+            String query = "select * from student_details";
+            
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
     }
 
     @Override
